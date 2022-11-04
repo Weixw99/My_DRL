@@ -1,0 +1,48 @@
+which_agent: 2
+args.run_num: 6
+args.use_existing_training_data: 0
+args.use_existing_dynamics_model: 0
+
+follow_trajectories: True
+
+data_collection:
+    use_threading: True
+    num_rollouts_train: 629
+    num_rollouts_val: 20
+
+dyn_model:
+    ####relu
+    num_fc_layers: 1 #1
+    depth_fc_layers: 500
+    batchsize: 512
+    lr: 0.001
+    nEpoch: 60   #60 30
+    fraction_use_new: 1
+####
+controller:
+    horizon: 45   #50
+    num_control_samples: 3000 #1000   1000
+    horizons: 10
+
+aggregation:
+    num_aggregation_iters: 9
+    num_trajectories_for_aggregation: 1
+    rollouts_forTraining: 6290  #6290
+
+noise:
+    make_aggregated_dataset_noisy: True
+    make_training_dataset_noisy: True
+    noise_actions_during_MPC_rollouts: True
+
+steps:
+    dt_steps: 10 #dt_steps: frameskip normally 50, but changed it to 150
+    steps_per_episode: 5800 #6290
+    steps_per_rollout_train: 500
+    steps_per_rollout_val: 200
+
+saving:
+    min_rew_for_saving: 0
+
+generic:
+    visualize_True: True
+    visualize_False: False

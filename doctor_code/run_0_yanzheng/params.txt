@@ -1,0 +1,4 @@
+{"steps_per_episode": 333, "make_aggregated_dataset_noisy": "True", "steps_per_rollout_val": 333, "num_trajectories_for_aggregation": 10, "dt_steps": 3, "rollouts_forTraining": 9, "lr": 0.001, "x_index": 10, "num_control_samples": 5000, "min_rew_for_saving": 0, "noise_actions_during_MPC_rollouts": "True", "visualize_MPC_rollout": "True", "tf_datatype": "<dtype: 'float64'>", "seed": 0, "noiseToSignal": 0.01, "make_training_dataset_noisy": "True", "depth_fc_layers": 500, "use_threading": "True", "horizon": 20, "steps_per_rollout_train": 333, "num_fc_layers": 1, "num_aggregation_iters": 6, "y_index": 11, "desired_traj_type": "straight", "follow_trajectories": "False", "num_rollouts_save_for_mf": 60, "use_existing_training_data": "True", "batchsize": 512, "num_rollouts_train": 25, "nEpoch": 30, "which_agent": 2, "fraction_use_new": 0.9}
+
+swimmer_forward
+
